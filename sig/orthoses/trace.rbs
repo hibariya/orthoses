@@ -3,8 +3,9 @@
 class Orthoses::Trace
   @loader: untyped
   @patterns: untyped
-  def initialize: (untyped loader, patterns: untyped) -> void
-  def call: () -> untyped
+  @sort_union_types: untyped
+  def initialize: (Orthoses::_Call loader, patterns: Array[String], ?sort_union_types: bool?) -> void
+  def call: () -> Orthoses::store
 end
 
 class Orthoses::Trace::Attribute
